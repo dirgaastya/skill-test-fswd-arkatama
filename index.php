@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Form Input Data</title>
 </head>
+
 <body>
     <h2>Form Input Data</h2>
     <form method="post" action="">
@@ -11,7 +13,8 @@
     </form>
 
     <?php
-    function parseData($inputData) {
+    function parseData($inputData)
+    {
         $data = explode(" ", $inputData);
         $nama = "";
         $usia = "";
@@ -31,8 +34,8 @@
             }
         }
 
-        $nama = trim($nama);
-        $kota = trim(str_replace(array('tahun', 'thn', 'th'), '', $kota));
+        $nama = strtoupper(trim($nama));
+        $kota = strtoupper(trim(str_replace(array('tahun', 'thn', 'th'), '', $kota)));
         return array('nama' => $nama, 'usia' => $usia, 'kota' => $kota);
     }
 
@@ -45,7 +48,7 @@
         $host = "127.0.0.1";
         $username = "root";
         $password = "";
-        $database = "skill-test";
+        $database = "skill_test";
 
         $connection = mysqli_connect($host, $username, $password, $database);
 
@@ -71,4 +74,5 @@
     }
     ?>
 </body>
+
 </html>
