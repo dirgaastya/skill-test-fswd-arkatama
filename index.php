@@ -45,7 +45,7 @@
         $host = "127.0.0.1";
         $username = "root";
         $password = "";
-        $database = "skill-test";
+        $database = "skill_test";
 
         $connection = mysqli_connect($host, $username, $password, $database);
 
